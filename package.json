@@ -2,31 +2,34 @@
   "name": "sportsstore",
   "version": "0.1.0",
   "private": true,
+  "type": "commonjs",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.1",
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
-    "web-vitals": "^1.1.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
-    "@fortawesome/fontawesome-free": "^5.6.1",
     "apollo-boost": "^0.1.22",
     "axios": "^0.18.0",
     "bootstrap": "^4.1.2",
+    "colorette": "^1.2.0",
     "graphql": "^14.0.2",
+    "react": "^16.8.6",
     "react-apollo": "^2.3.2",
+    "react-dom": "^16.8.6",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
-    "redux": "^4.0.1"
+    "react-scripts": "3.0.1",
+    "redux": "^4.0.1",
+    "web-vitals": "^1.1.2"
   },
   "scripts": {
     "start": "npm-run-all --parallel reactstart webservice",
     "reactstart": "react-scripts start",
-    "webservice": "node server.js",  
+    "webservice": "nodemon --watch ./src/server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build??": "cd packages/react-scripts && node bin/react-scripts.js build"
   },
   "eslintConfig": {
     "extends": [
